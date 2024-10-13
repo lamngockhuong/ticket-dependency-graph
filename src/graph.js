@@ -1,5 +1,6 @@
 import go from 'gojs';
 import { trelloColors, linkColor } from './colors';
+import PinchResizingTool from './pinchResizingTool';
 
 const GO = go.GraphObject.make;
 
@@ -7,7 +8,7 @@ const getNumberNode = (
   textBindingKey,
   shapeFillColor,
   textStrokeColor,
-  visibleBindingKey
+  visibleBindingKey,
 ) => {
   const rectangleShapeProperties = [
     go.Shape,
@@ -36,7 +37,7 @@ const getNumberNode = (
     'Auto',
     { margin: 2 },
     GO(...rectangleShapeProperties),
-    GO(...textShapeProperties)
+    GO(...textShapeProperties),
   );
 };
 
@@ -49,9 +50,14 @@ const trelloCardNumberNodes = GO(
     'complexityEstimation',
     '#47bae0',
     'white',
-    'isComplexityEstimationVisible'
+    'isComplexityEstimationVisible',
   ),
-  getNumberNode('complexityReal', '#81cae2', 'white', 'isComplexityRealVisible')
+  getNumberNode(
+    'complexityReal',
+    '#81cae2',
+    'white',
+    'isComplexityRealVisible',
+  ),
 );
 
 const trelloCardLabels = GO(
@@ -68,22 +74,22 @@ const trelloCardLabels = GO(
         go.Shape,
         'RoundedRectangle',
         { fill: trelloColors.purple, stroke: null }, // default to purple when the color coming from a Trello card label isn't in the trelloColors list
-        new go.Binding('fill', 'color')
+        new go.Binding('fill', 'color'),
       ),
       GO(go.TextBlock, new go.Binding('text', 'name'), {
         margin: new go.Margin(1, 4),
         font: 'bold 10px sans-serif',
         stroke: 'white',
-      })
+      }),
     ),
-  }
+  },
 );
 
 window.myDiagram = GO(go.Diagram, 'dependencyGraph', {
+  toolManager: new PinchResizingTool(),
   initialContentAlignment: go.Spot.Center,
   'undoManager.isEnabled': true,
   allowCopy: false,
-  autoScale: go.Diagram.Uniform,
   layout: GO(go.LayeredDigraphLayout, { direction: 90, layerSpacing: 10 }),
 });
 
@@ -93,7 +99,7 @@ window.myDiagram.nodeTemplate = GO(
   {
     isShadowed: true,
     shadowColor: '#C5C1AA',
-    layoutConditions: go.Part.LayoutAdded,
+    layoutConditions: go.LayoutConditions.Added,
   },
   {
     mouseDrop(e, node) {
@@ -126,10 +132,10 @@ window.myDiagram.nodeTemplate = GO(
           wrap: go.TextBlock.WrapFit,
           alignment: go.Spot.Left,
         },
-        new go.Binding('text', 'name')
-      )
-    )
-  )
+        new go.Binding('text', 'name'),
+      ),
+    ),
+  ),
 );
 
 // To be populated with Trello
@@ -230,8 +236,8 @@ window.myDiagram.linkTemplate = GO(
       // so we offset it by about half an arrow length along the link.
       segmentOffset: new go.Point(10, 0),
     },
-    { scale: 1.9, fill: linkColor, stroke: linkColor }
-  )
+    { scale: 1.9, fill: linkColor, stroke: linkColor },
+  ),
 );
 
 window.myDiagram.addDiagramListener('SelectionDeleting', (e) => {

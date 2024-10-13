@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- HTML5 document type -->
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -64,9 +63,7 @@
               v-on:change="onListChange"
               class="browser-default"
             >
-              <option value="" selected>
-                Filter by column
-              </option>
+              <option value="" selected>Filter by column</option>
               <option v-for="list in lists" v-bind:value="list.id">
                 {{ list.name }}
               </option>
@@ -79,9 +76,7 @@
               v-on:change="onLabelChange"
               class="browser-default"
             >
-              <option value="" selected>
-                Filter by label
-              </option>
+              <option value="" selected>Filter by label</option>
               <option v-for="label in labels" v-bind:value="label.id">
                 {{ label.name }}
               </option>

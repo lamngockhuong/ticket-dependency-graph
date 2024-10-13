@@ -4,12 +4,12 @@ Use this tool with Trello to visualize the dependencies between your tickets
 
 ## Demo
 
-Link for [live demo](https://theodo.github.io/ticket-dependency-graph/)
+Link for [live demo](https://lamngockhuong.github.io/ticket-dependency-graph/)
 
 ## Installation
 
-```
-git clone https://github.com/theodo/ticket-dependency-graph.git
+```bash
+git clone https://github.com/lamngockhuong/ticket-dependency-graph.git
 cd ticket-dependency-graph
 npm install
 npm start
@@ -19,7 +19,7 @@ Server should be running on `http://localhost:8080/`
 
 ## Deployment
 
-On every commit or merge on master, the app is automatically deployed to [Github Pages](https://theodo.github.io/ticket-dependency-graph/), thanks to a [CircleCI workflow](https://app.circleci.com/pipelines/github/theodo/ticket-dependency-graph).
+On every commit or merge on master, the app is automatically deployed to [Github Pages](https://lamngockhuong.github.io/ticket-dependency-graph/), thanks to a [CircleCI workflow](https://app.circleci.com/pipelines/github/theodo/ticket-dependency-graph).
 
 ## Usage
 
@@ -41,9 +41,8 @@ On every commit or merge on master, the app is automatically deployed to [Github
 ## Known issues
 
 - Tickets that are moved to another column disappear from the graph
-- [More issues](https://github.com/theodo/ticket-dependency-graph/issues)
+- [More issues](https://github.com/lamngockhuong/ticket-dependency-graph/issues)
 
-## Feature and bug fix backlog
+## References
 
-Managed on Trello: https://trello.com/b/9AaI3LEO/ticket-dependency-graph  
-You can ask access to @ivanosevitch on GitHub.
+- [Theodo's Ticket Dependency Graph](https://github.com/theodo/ticket-dependency-graph)

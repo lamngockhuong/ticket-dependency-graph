@@ -4,7 +4,7 @@ var opts = {
   apiEndpoint: 'https://api.trello.com',
   authEndpoint: 'https://trello.com',
   intentEndpoint: 'https://trello.com',
-  key: '39eb391c4ba671275f13eb4ee1d51116',
+  key: '3dd96852bcd686e851701d1e5278c65e',
 };
 
 var deferred,
@@ -16,7 +16,6 @@ var deferred,
   slice = [].slice;
 
 // The local storage key must be related to the ticket dependency graph, to avoid conflict with the other
-// apps hosted on https://theodo.github.io/
 // Indeed, local storage keys are shared among apps from the same host (more exactly, among the protocol://host:port combination)
 const tokenStorageKey = 'ticket-dependency-graph-token';
 
@@ -131,7 +130,7 @@ wrapper = function (window, jQuery, opts) {
           },
           expiration: '30days',
         },
-        userOpts
+        userOpts,
       );
       regexToken = /[&#]?token=([0-9a-f]{64})/;
       persistToken = function () {
@@ -194,7 +193,7 @@ wrapper = function (window, jQuery, opts) {
                       : void 0;
                   }
                 };
-              })(this)
+              })(this),
             );
             width = 420;
             height = 470;
@@ -220,7 +219,7 @@ wrapper = function (window, jQuery, opts) {
                 ',left=' +
                 left +
                 ',top=' +
-                top
+                top,
             );
             receiveMessage = function (event) {
               var ref2;
@@ -295,7 +294,7 @@ wrapper = function (window, jQuery, opts) {
             ',left=' +
             left +
             ',top=' +
-            top
+            top,
         );
       };
       if (next != null) {
