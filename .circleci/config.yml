@@ -5,7 +5,7 @@ orbs:
 jobs:
   build_deploy:
     docker:
-      - image: cimg/node:16.13.0
+      - image: cimg/node:23.0.0
     steps:
       - checkout
       - run: npm ci
