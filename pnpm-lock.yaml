@@ -10,7 +10,7 @@ importers:
     dependencies:
       gojs:
         specifier: ^3.0.12
-        version: 3.0.12
+        version: 3.0.13
       jquery:
         specifier: ^3.7.1
         version: 3.7.1
@@ -29,7 +29,7 @@ importers:
         version: 8.12.1
       babel-loader:
         specifier: ^9.2.1
-        version: 9.2.1(@babel/core@7.25.8)(webpack@5.95.0(webpack-cli@5.1.4))
+        version: 9.2.1(@babel/core@7.25.8)(webpack@5.95.0)
       eslint:
         specifier: ^8.57.1
         version: 8.57.1
@@ -1463,8 +1463,8 @@ packages:
     resolution: {integrity: sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ==}
     engines: {node: '>= 0.4'}
 
-  gojs@3.0.12:
-    resolution: {integrity: sha512-rB8sbDQohJP2Q3f4NkUZE14OoSTGRPZPk7Mugh8Is+yG/goWWll/lzzY09O4wjieKTwPueo8pKw5IfvlAmQjPQ==}
+  gojs@3.0.13:
+    resolution: {integrity: sha512-517BWFQoUdER9Xmqlp1ZM+kY57vCN61cBMdRITGahqlrmFf/9Nl9MFK6YhnVAGco8Uagx9o1wwsEXfc78Jn/SA==}
 
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
@@ -3488,17 +3488,17 @@ snapshots:
       '@webassemblyjs/ast': 1.12.1
       '@xtuc/long': 4.2.2
 
-  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0))(webpack@5.95.0(webpack-cli@5.1.4))':
+  '@webpack-cli/configtest@2.1.1(webpack-cli@5.1.4)(webpack@5.95.0)':
     dependencies:
       webpack: 5.95.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0)
 
-  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0))(webpack@5.95.0(webpack-cli@5.1.4))':
+  '@webpack-cli/info@2.0.2(webpack-cli@5.1.4)(webpack@5.95.0)':
     dependencies:
       webpack: 5.95.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0)
 
-  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0))(webpack-dev-server@5.1.0(webpack-cli@5.1.4)(webpack@5.95.0))(webpack@5.95.0(webpack-cli@5.1.4))':
+  '@webpack-cli/serve@2.0.5(webpack-cli@5.1.4)(webpack-dev-server@5.1.0)(webpack@5.95.0)':
     dependencies:
       webpack: 5.95.0(webpack-cli@5.1.4)
       webpack-cli: 5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0)
@@ -3624,7 +3624,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  babel-loader@9.2.1(@babel/core@7.25.8)(webpack@5.95.0(webpack-cli@5.1.4)):
+  babel-loader@9.2.1(@babel/core@7.25.8)(webpack@5.95.0):
     dependencies:
       '@babel/core': 7.25.8
       find-cache-dir: 4.0.0
@@ -4307,7 +4307,7 @@ snapshots:
       define-properties: 1.2.1
       gopd: 1.0.1
 
-  gojs@3.0.12: {}
+  gojs@3.0.13: {}
 
   gopd@1.0.1:
     dependencies:
@@ -5133,7 +5133,7 @@ snapshots:
 
   tapable@2.2.1: {}
 
-  terser-webpack-plugin@5.3.10(webpack@5.95.0(webpack-cli@5.1.4)):
+  terser-webpack-plugin@5.3.10(webpack@5.95.0):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
@@ -5278,9 +5278,9 @@ snapshots:
   webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0):
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0))(webpack@5.95.0(webpack-cli@5.1.4))
-      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0))(webpack@5.95.0(webpack-cli@5.1.4))
-      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.95.0))(webpack-dev-server@5.1.0(webpack-cli@5.1.4)(webpack@5.95.0))(webpack@5.95.0(webpack-cli@5.1.4))
+      '@webpack-cli/configtest': 2.1.1(webpack-cli@5.1.4)(webpack@5.95.0)
+      '@webpack-cli/info': 2.0.2(webpack-cli@5.1.4)(webpack@5.95.0)
+      '@webpack-cli/serve': 2.0.5(webpack-cli@5.1.4)(webpack-dev-server@5.1.0)(webpack@5.95.0)
       colorette: 2.0.20
       commander: 10.0.1
       cross-spawn: 7.0.3
@@ -5294,7 +5294,7 @@ snapshots:
     optionalDependencies:
       webpack-dev-server: 5.1.0(webpack-cli@5.1.4)(webpack@5.95.0)
 
-  webpack-dev-middleware@7.4.2(webpack@5.95.0(webpack-cli@5.1.4)):
+  webpack-dev-middleware@7.4.2(webpack@5.95.0):
     dependencies:
       colorette: 2.0.20
       memfs: 4.13.0
@@ -5333,7 +5333,7 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 7.4.2(webpack@5.95.0(webpack-cli@5.1.4))
+      webpack-dev-middleware: 7.4.2(webpack@5.95.0)
       ws: 8.18.0
     optionalDependencies:
       webpack: 5.95.0(webpack-cli@5.1.4)
@@ -5374,7 +5374,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(webpack@5.95.0(webpack-cli@5.1.4))
+      terser-webpack-plugin: 5.3.10(webpack@5.95.0)
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     optionalDependencies:
